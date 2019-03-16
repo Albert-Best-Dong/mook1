@@ -3,10 +3,23 @@
 	margin: 0;
 	font-family: "Microsoft YaHei UI";
 }
+.header li a{
+	text-decoration: none;
+	color: #ffffff;
+	
+}
+.header li a:hover{
+	background-color: #000;
+	height: 100%;
+	opacity: 0.8;
+	display: inline-block;
+}
 .header{
 	height: 100px;
 	width: 100%;
 	background-color: #07cbc9;
+	position: fixed;
+	top: 0;
 	
 }
 .header .logo img{
@@ -32,11 +45,16 @@
 	color: #ffffff;
 }
 .main{
-	overflow: hidden;
+	position: relative;
+
+}
+.main .banner{
+	position: relative;
 }
 .main .banner img{
 	width:100%;
 	height: 600px;
+	margin-top: 100px;
 }
 .main .layer{
 	position: absolute;
@@ -56,21 +74,33 @@
 	left: 40%;
 	opacity: 0.5;
 	font-size: 12px;
+	z-index: 2;
 }
 .main .comment .comment-layer{
 	margin: 20px;
 
 }
-.about{
+/**
+*	about区域		
+*/
+.main .about{
 	width:100%;
 	margin: 0 auto;
+	text-align: center;
 }
-.about .us{
+.main .about .middle{
+	height: 200px;
+	margin-top: 10px;
+}
+.main .about .us{
 	float: left;
+	text-align: left;
 }
 .about .us .content{
-	text-align: left;
+	border:;
 	overflow: hidden;
+	background-color: #ffffff;
+	opacity: 0.5;
 }
 .about .number{
 	float: right;
@@ -91,9 +121,81 @@
 	border:1px solid #07cbc9;
 	overflow: hidden;
 }
-.about .number .students{
+.main .about .number .students{
 	width: 20px;
 	height: 35px;
 	border:1px solid #07cbc9;
 	overflow: hidden;
+}
+.main .about .pic{
+
+}
+/**
+	gallery区域	
+*/
+.main .gallery{
+	overflow: hidden;
+	margin-top: 400px;
+	margin-bottom: 50px;
+	position: relative;
+	
+
+}
+.main .gallery .description{
+	overflow: hidden;
+	text-align: center;
+	left: 30%;
+}
+.main .gallery .description .gallery-desc:before{
+	content:' ';
+	position:absolute;
+	bottom:-10px;
+	left:0;
+	right:0;
+	margin:auto;
+	width:20px;
+	background-color:#07cbc9;
+	height:1px;
+	display: block;
+
+}
+.main .gallery .description .gallery-desc{
+
+}
+.main .gallery .pic-word{
+	
+}
+.main .gallery .pic-word .pw{
+	overflow: hidden;
+
+	position: relative;
+	margin-top: 20px;
+	margin-left: 20%;
+}
+
+.main .gallery .pic-word .pw .pic-show{
+	float: left;
+	margin: 10px;
+	background-color: #000;
+	/*position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto auto;*/
+
+}
+.main .gallery .pic-word .pw .pic-show .word{
+	height: 40px;
+	background-color: #000;
+	color: #ffffff;
+	padding-top: 20px;
+	padding-left: 15px;
+}
+.footer{
+	height: 100px;
+	background-color: #07cbc9;
+	color: #ffffff;font-size: 15px;
+	text-align: center;
+	line-height: 100px;
 }
