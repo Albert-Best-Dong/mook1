@@ -3,14 +3,34 @@
 	margin: 0;
 	font-family: "Microsoft YaHei UI";
 }
-.header li a{
+.header a{
 	text-decoration: none;
 	color: #ffffff;
 	
 }
+/**
+*button悬浮设置成#07cbc9
+*  input 和textarea悬浮设置成#07cbc9
+*/
+button:hover{
+	background-color: #07cbc9 !important;
+	cursor: pointer;
+
+}
+input:hover{
+	border:1px solid  #07cbc9 !important;
+}
+textarea:hover{
+	border:1px solid  #07cbc9 !important;
+}
+.header li a{
+	padding-left: 10px;
+	padding-right: 10px;
+}
 .header li a:hover{
 	background-color: #000;
 	height: 100%;
+
 	opacity: 0.8;
 	display: inline-block;
 }
@@ -19,6 +39,7 @@
 	width: 100%;
 	background-color: #07cbc9;
 	position: fixed;
+	z-index: 999999;
 	top: 0;
 	
 }
@@ -39,26 +60,32 @@
 	list-style: none;
 	float: left;
 	width: 80px;
+	margin-left: 10px;
+	margin-right: 10px;
 	height: 100px;
 	line-height: 100px;
-	padding-right: 10px; 
+	 
 	color: #ffffff;
 }
 .main{
 	position: relative;
+	margin-top: 100px;
 
 }
+/**
+*banner区域
+*/
 .main .banner{
 	position: relative;
 }
 .main .banner img{
 	width:100%;
 	height: 600px;
-	margin-top: 100px;
+	
 }
 .main .layer{
 	position: absolute;
-	top:100px;
+	top:0px;
 	background-color: #000;
 	left: 0;
 	width: 100%;
@@ -68,18 +95,48 @@
 .main .comment{
 	overflow: hidden;
 	position: absolute;
-	width:600px;
-	height: 300px;
-	top:300px;
+	width:500px;
+	top:100px;
 	left: 40%;
 	opacity: 0.5;
 	font-size: 12px;
 	z-index: 2;
+	text-align: center;
 }
-.main .comment .comment-layer{
-	margin: 20px;
 
+.main .comment .comment-layer button{
+	background-color: transparent;
+	width: 150px;
+	height: 40px;
+	color: #ffffff;
+	cursor: pointer;
 }
+
+
+.main .comment .comment-layer input{
+	background-color: transparent;
+	border:1px solid #ffffff;
+	height: 30px;
+	width: 400px;
+	margin: 10px 0;
+	text-indent: 5px;
+  
+}
+input::-webkit-input-placeholder {
+
+	color: #ffffff; 
+} 
+.main .comment .comment-layer .textarea{
+	border:1px solid #ffffff;
+	background-color: transparent;
+	width: 400px;
+	height: 150px;
+	
+}
+textarea::-webkit-input-placeholder {
+
+	color: #ffffff; 
+} 
 /**
 *	about区域		
 */
@@ -87,55 +144,208 @@
 	width:100%;
 	margin: 0 auto;
 	text-align: center;
+	overflow: hidden;
+
 }
-.main .about .middle{
-	height: 200px;
+.main .about .top .title{
+	position: relative;
+}
+/**
+*	about标题与文字间的小横线
+*/
+.main .about .top .title h1:after{
+	position: absolute;
+	content: "";
+	height: 1px;
+	width: 40px;
+	background-color: #07cbc9;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: -5px;
+}
+.main .about .top .word{
 	margin-top: 10px;
 }
+
+.main .about .middle{
+	margin: 0 auto;
+	width: 1000px;
+	margin-top: 10px;
+	overflow: hidden;
+	
+}
 .main .about .us{
+	width: 200px;
 	float: left;
+	position: relative;
 	text-align: left;
 }
 .about .us .content{
-	border:;
+	width: 300px;
 	overflow: hidden;
+	position: absolute; 
+	border:1px solid ;
+	padding: 10px;
+	
+	
+}
+.about .us .content .content-layer{
+	position: absolute;
+	top:0px;
+	bottom: 0;
+	right: 0;
 	background-color: #ffffff;
+	left: 0;
+	width: 100%;
 	opacity: 0.5;
+	z-index: 1;
+}
+.about .us .content .context{
+	position: relative;
+	z-index: 3;
+}
+.about .us .content button：hover{
+	background-color: #ffffff !important;
+}
+.about .us .content button{
+	position: relative;
+	background-color: #000;
+	width: 100px;
+	height: 40px;
+	color: #ffffff;
+	border:2px solid #000;
+	margin-top: 10px;
+	z-index: 3;
 }
 .about .number{
-	float: right;
+	float: left;
+	width: 200px;
 	
-	
-	margin: 1px;
 }
-.line{
-	border-top: 1px;
-	border-color: #07cbc9;
-	border-width:1px;
-	border-style: solid;
+.about .number .num{
+	position: relative;
+	size: 30px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.about .number .num:after{
+	position: absolute;
+	content: "";
+	height: 1px;
+	width: 40px;
+	background-color: #07cbc9;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: -5px;
+}
+.about .number .peo{
+
 }
 .about .number .faculty{
-	width: 40px;
-	height: 35px;
+	width: 150px;
+	height: 80px;
 	margin:2px;
 	border:1px solid #07cbc9;
 	overflow: hidden;
+	margin-left: 20px
 }
 .main .about .number .students{
-	width: 20px;
-	height: 35px;
+	width: 150px;
+	height: 80px;
 	border:1px solid #07cbc9;
 	overflow: hidden;
+	margin-left: 20px;
+	margin-bottom: 20px;
 }
-.main .about .pic{
+.main .about-pic{
+	float: left;
+	width: 600px;
+}
+.main .about-pic img{
+	width: 100%;
+}
+.main .bottom{
+	width: 100%;
+	margin-top: 80px;
+}
+.main .bottom .facility{
+	overflow: hidden;
 
+	background-color: #07cbc9;
+	vertical-align: middle;
+
+	/*position: relative;*/
+}
+.main .bottom .facility .facility-con{
+	float: left;
+	width: 25%;
+	text-align: left;
+}
+.main .bottom .facility .facility-pic{
+	
+	/*position: absolute;*/
+}
+.main .bottom .facility .facility-pic img{
+	vertical-align: middle;
+	width: 100%;
+}
+
+.main .bottom .facility .facility-instruc{
+	position: relative;
+	color: #ffffff;
+	height: 100%;
+}
+/**
+*
+*小三角
+*/
+.main .bottom .facility .facility-instruc:after{
+	border: 10px solid transparent;
+  	border-right: 10px solid #07cbc9;
+  	left: -20px;
+  	width: 0;
+  	height: 0;
+  	position: absolute;
+  	content: ' ';
+  	top: 0;
+  	bottom: 0;
+  	margin: auto;
+}
+.main .bottom .facility .facility-con h1{
+
+	margin: 30px 50px;
+}
+.main .bottom .facility .facility-con .brief{
+	
+	margin: 20px 50px;
+}
+.main .bottom .facility .facility-con .detail{
+	opacity: 0.6;
+	margin: 20px 50px;
+}
+.main .bottom .facility .facility-con .btn{
+	margin-top: 70px;
+	text-align: center;
+}
+.main .bottom .facility .facility-con button{
+	position: relative;
+	background-color: #000;
+	width: 100px;
+	height: 40px;
+	color: #ffffff;
+	border:2px solid #000;
+	margin-top: 10px;
+	z-index: 3;
 }
 /**
 	gallery区域	
 */
 .main .gallery{
 	overflow: hidden;
-	margin-top: 400px;
+	margin-top: 50px;
 	margin-bottom: 50px;
 	position: relative;
 	
@@ -145,6 +355,23 @@
 	overflow: hidden;
 	text-align: center;
 	left: 30%;
+}
+/**
+*gallery标题与文字间的小横线
+*/
+.main .gallery .description .title {
+	position: relative;
+}
+.main .gallery .description .title h1:after{
+	position: absolute;
+	content: "";
+	height: 1px;
+	width: 40px;
+	background-color: #07cbc9;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: -5px;
 }
 .main .gallery .description .gallery-desc:before{
 	content:' ';
@@ -160,29 +387,26 @@
 
 }
 .main .gallery .description .gallery-desc{
-
+	margin-top: 10px;
 }
 .main .gallery .pic-word{
 	
 }
 .main .gallery .pic-word .pw{
 	overflow: hidden;
-
-	position: relative;
+	width:1140px;
+	margin-left: auto;
+	margin-right: auto;
+	
 	margin-top: 20px;
-	margin-left: 20%;
+	
 }
 
 .main .gallery .pic-word .pw .pic-show{
 	float: left;
 	margin: 10px;
 	background-color: #000;
-	/*position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto auto;*/
+
 
 }
 .main .gallery .pic-word .pw .pic-show .word{
